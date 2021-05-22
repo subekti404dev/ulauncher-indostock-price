@@ -1,0 +1,19 @@
+{
+  "required_api_version": "^1.0.0",
+  "name": "IndoStock Price",
+  "description": "Allow user to see current price of indo stock",
+  "developer_name": "Urip Subekti",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "indostock_price",
+      "type": "keyword",
+      "name": "Indostock Price",
+      "description": "Get Price of Indo Stock",
+      "default_value": "istock"
+    }
+  ]
+}

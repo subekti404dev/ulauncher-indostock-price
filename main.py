@@ -29,9 +29,11 @@ class KeywordQueryEventListener(EventListener):
             data        = response.json()
 
             if data["chart"]["result"] is not None:
-                price = data["chart"]["result"][0]["meta"]["regularMarketPrice"]
+                meta = data["chart"]["result"][0]["meta"]
+                symbol = meta["symbol"]
+                price = meta["regularMarketPrice"]
                 items.append(ExtensionResultItem(icon='images/icon.png',
-                                                 name='%s Price' % price,
+                                                 name='%s %s IDR' %(symbol, int(price)),
                                                  description='The result is a aproximated',
                                                  on_enter=HideWindowAction()))
 

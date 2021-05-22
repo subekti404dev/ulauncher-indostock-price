@@ -11,7 +11,7 @@
     {
       "id": "indostock_price",
       "type": "keyword",
-      "name": "Indostock Price",
+      "name": "Indostock",
       "description": "Get Price of Indo Stock",
       "default_value": "istock"
     }

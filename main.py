@@ -1,6 +1,4 @@
 import requests
-import locale
-
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
@@ -42,12 +40,8 @@ class KeywordQueryEventListener(EventListener):
        
         return RenderResultListAction(items)
 
-def idr_format(value, with_prefix=False, decimal=0):
-    locale.setlocale(locale.LC_NUMERIC, 'IND')
-    rupiah = locale.format("%.*f", (decimal, value), True)
-    if with_prefix:
-        return "Rp. {}".format(rupiah)
-    return rupiah
+def idr_format(value):
+    return "{:,}".format(value).replace(",", ".")
 
 if __name__ == '__main__':
     DemoExtension().run()

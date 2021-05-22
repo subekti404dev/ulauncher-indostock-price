@@ -31,9 +31,9 @@ class KeywordQueryEventListener(EventListener):
                 meta = data["chart"]["result"][0]["meta"]
                 symbol = meta["symbol"]
                 price = int(meta["regularMarketPrice"])
-                idr = "{:,}".format(price).replace(",", ".")
+                # idr = "{:,}".format(price).replace(",", ".")
                 items.append(ExtensionResultItem(icon='images/icon.png',
-                                                 name='%s = IDR %s' %(symbol, idr),
+                                                 name='%s = IDR %s' %(symbol, price),
                                                  description='The result is a aproximated',
                                                  on_enter=HideWindowAction()))
 

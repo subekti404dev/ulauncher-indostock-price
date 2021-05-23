@@ -16,3 +16,6 @@ An [Ulauncher](https://ulauncher.io/) extension to get indonesian stock price in
 ```bash
 istock symbol # change symbol with stock symbol, For example: unvr 
 ```
+
+### Link
+https://ext.ulauncher.io/-/github-subekti404dev-ulauncher-indostock-price

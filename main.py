@@ -36,7 +36,7 @@ class KeywordQueryEventListener(EventListener):
                 items.append(ExtensionResultItem(icon='images/icon.png',
                                                  name='IDR %s' % idr,
                                                  description='The Price of %s' % symbol,
-                                                 on_enter=OpenUrlAction('https://finance.yahoo.com/quote/%s.JK')))
+                                                 on_enter=OpenUrlAction('https://finance.yahoo.com/quote/%s.JK' % symbol)))
 
        
         return RenderResultListAction(items)

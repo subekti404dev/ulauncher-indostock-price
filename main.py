@@ -32,11 +32,11 @@ class KeywordQueryEventListener(EventListener):
                 symbol  = meta["symbol"].replace(".JK", "")
                 price   = int(meta["regularMarketPrice"])
                 idr     = "{:,}".format(price).replace(',','.')
-                url     = "https://finance.yahoo.com/quote/" + symbol + ".JK"
+#                 url     = "https://finance.yahoo.com/quote/" + symbol + ".JK"
                 items.append(ExtensionResultItem(icon='images/icon.png',
                                                  name='IDR %s' % idr,
                                                  description='The Price of %s' % symbol,
-                                                 on_enter=OpenUrlAction(url)))
+                                                 on_enter=OpenUrlAction('https://finance.yahoo.com/quote/%s.JK')))
 
        
         return RenderResultListAction(items)

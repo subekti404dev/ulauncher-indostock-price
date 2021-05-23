@@ -29,12 +29,12 @@ class KeywordQueryEventListener(EventListener):
 
             if data["chart"]["result"] is not None:
                 meta = data["chart"]["result"][0]["meta"]
-                symbol = meta["symbol"]
+                symbol = meta["symbol"].replace(".JK", "")
                 price = int(meta["regularMarketPrice"])
-                # idr = "{:,}".format(price).replace(",", ".")
+                idr = "{:,}".format(price).replace(",", ".")
                 items.append(ExtensionResultItem(icon='images/icon.png',
-                                                 name='%s = IDR %s' %(symbol, price),
-                                                 description='The result is a aproximated',
+                                                 name='IDR %s' % idr,
+                                                 description='Price of %s' % symbol,
                                                  on_enter=HideWindowAction()))
 
        

@@ -1,6 +1,6 @@
 # Indostock Price - Ulauncher Extension
 
-An ulauncher extension to get indonesian stock price in IDR format.
+An [Ulauncher](https://ulauncher.io/) extension to get indonesian stock price in IDR format.
 
 ### Screenshot
 ![Screenshot](./images/ss.gif)
